@@ -62,17 +62,23 @@
           </tbody>
         </table>
 
+        {% comment %}
+        Commented out this note box to simplify UI on cart page.
         <div class="span6 inner-left inner-right">
           <div class="checkout-buttons clearfix">
             <label for="note">{{ 'cart.general.note' | t }}</label>
             <textarea id="note" name="note" rows="10" cols="50">{{ cart.note }}</textarea>
           </div>
         </div>
+        {% endcomment %}
 
         <div class="span6 cart-buttons inner-right inner-left">
           <div class="buttons clearfix">
             <input type="submit" id="checkout" class="btn" name="checkout" value="{{ 'cart.general.checkout' | t }}" />
+            {% comment %}
+            Commented out this "Update" button to simplify UI on cart page.
             <input type="submit" id="update-cart" class="btn" name="update" value="{{ 'cart.general.update' | t }}" />
+            {% endcomment %}
           </div>
         </div>
         
