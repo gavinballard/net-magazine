@@ -62,15 +62,14 @@
           </tbody>
         </table>
 
-        {% comment %}
-        Commented out this note box to simplify UI on cart page.
         <div class="span6 inner-left inner-right">
           <div class="checkout-buttons clearfix">
-            <label for="note">{{ 'cart.general.note' | t }}</label>
-            <textarea id="note" name="note" rows="10" cols="50">{{ cart.note }}</textarea>
+            <label>Other issues you might be interested in:</label>
+            <ul>{% for product in collections.frontpage.products %}
+            {% include 'upsell-product' with product %}
+            {% endfor %}</ul>
           </div>
         </div>
-        {% endcomment %}
 
         <div class="span6 cart-buttons inner-right inner-left">
           <div class="buttons clearfix">
